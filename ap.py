@@ -99,5 +99,4 @@ with open('SVM.pickle', 'rb') as f:
 if st.button("Test Loaded Model"):
     test_prediction = model.predict(X_new)
     st.write(f"**Prediction from Loaded Model:** {test_prediction[0]}")
-
-        st.write("Please make a prediction first to test the loaded model.")
+    st.write("Please make a prediction first to test the loaded model.")
