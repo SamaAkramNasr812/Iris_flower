@@ -88,15 +88,4 @@ if st.button("Predict"):
     prediction = svn.predict(X_new)
     st.write(f"**Prediction of Species:** {prediction[0]}")
 
-# Save the model
-with open('SVM.pickle', 'wb') as f:
-    pickle.dump(svn, f)
 
-# Load the model (optional, for demonstration purposes)
-with open('SVM.pickle', 'rb') as f:
-    model = pickle.load(f)
-
-if st.button("Test Loaded Model"):
-    test_prediction = model.predict(X_new)
-    st.write(f"**Prediction from Loaded Model:** {test_prediction[0]}")
-    st.write("Please make a prediction first to test the loaded model.")
