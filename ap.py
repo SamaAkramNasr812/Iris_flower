@@ -30,12 +30,6 @@ st.dataframe(df.head())
 st.write("### Statistical Summary")
 st.write(df.describe())
 
-# Visualize the dataset
-st.write("### Pairplot of the Dataset")
-fig = plt.figure()
-sns.pairplot(df, hue='Class_labels')
-st.pyplot(fig)
-
 # Separate features and target
 data = df.values
 X = data[:, 0:4]
